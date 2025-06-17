@@ -1,8 +1,1 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-.bg-blue-300 { background-color: rgb(147 197 253); }
-.bg-yellow-400 { background-color: rgb(250 204 21); }
-.pl-3 { padding-left: 0.75rem; }
+@import "tailwindcss";
