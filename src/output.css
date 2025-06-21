@@ -8,6 +8,7 @@
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-amber-950: oklch(27.9% 0.077 45.635);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -36,6 +37,8 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
@@ -513,6 +516,12 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-\[url\] {
+    background-color: url;
+  }
+  .bg-amber-50 {
+    background-color: var(--color-amber-50);
+  }
   .bg-amber-950 {
     background-color: var(--color-amber-950);
   }
@@ -537,6 +546,36 @@
   .bg-gradient-to-br {
     --tw-gradient-position: to bottom right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .bg-\[url\(\'\'\)\] {
+    background-image: url('');
+  }
+  .bg-\[url\(\'\.\'\)\] {
+    background-image: url('.');
+  }
+  .bg-\[url\(\'\.\/images\'\)\] {
+    background-image: url('./images');
+  }
+  .bg-\[url\(\'\.\/images\/\'\)\] {
+    background-image: url('./images/');
+  }
+  .bg-\[url\(\'\.\/images\/her\'\)\] {
+    background-image: url('./images/her');
+  }
+  .bg-\[url\(\'\.\/images\/hero\'\)\] {
+    background-image: url('./images/hero');
+  }
+  .bg-\[url\(\'\.\/images\/hero-bg\'\)\] {
+    background-image: url('./images/hero-bg');
+  }
+  .bg-\[url\(\'\.\/images\/hero-bg\.jpg\'\)\] {
+    background-image: url('./images/hero-bg.jpg');
+  }
+  .bg-\[url\(\'\.i\'\)\] {
+    background-image: url('.i');
+  }
+  .bg-\[url\(\)\] {
+    background-image: url();
   }
   .from-black {
     --tw-gradient-from: var(--color-black);
@@ -570,6 +609,12 @@
   .to-gray-900 {
     --tw-gradient-to: var(--color-gray-900);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-center {
+    background-position: center;
   }
   .p-1 {
     padding: calc(var(--spacing) * 1);
@@ -619,11 +664,25 @@
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
   }
+  .pb-3 {
+    padding-bottom: calc(var(--spacing) * 3);
+  }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
+  }
   .text-center {
     text-align: center;
   }
   .font-serif {
     font-family: var(--font-serif);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-4xl {
     font-size: var(--text-4xl);
