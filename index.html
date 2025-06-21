@@ -10,33 +10,49 @@
    
     <link href="./src/output.css" rel="stylesheet">
     <link href="./src/style.css" rel="stylesheet">
-    
+  
 
 </head>
 <body>
     <!--NavBar-->
     <nav class="hero-bg bg-cover bg-center h-screen">
+        <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
 
           <!--Container-->
-    <div class="flex  p-3 justify-between ">
+    <div class="flex  p-3 justify-between relative ">
 
         <!--Content 1-->
-        <div class="flex mr-6">
+        <div class="flex items-center justify-center ml-32 ">
             <img src="./images/logo.svg">
         </div>
 
         <!--Content 2-->
-           <div class="flex flex-row gap-x-6 mt-6 font-serif font-bold text-white">
-            <div>Home</div>
-            <div>About Us</div>
-            <div>Services</div>
-            <div>Blog</div>
-            <div>Contact us</div>
-        </div>
+          <div class="flex items-center space-x-8">
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                        Home
+                        <span class="text-xs ml-1">▼</span>
+                    </a>
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                        About Us
+                    </a>
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                        Services
+                    </a>
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                        Blog
+                    </a>
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                        Pages
+                        <span class="text-xs ml-1">▼</span>
+                    </a>
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                        Contact Us
+                    </a>
+                </div>
 
          <!--Content 3-->
-        <div class="flex mt-6 pb-3">
-            <div class="text-2xl font-bold font-serif text-white">Book now</div>
+        <div class="flex mt-6 pb-3 mr-32">
+            <div class="book-btn text-2xl font-bold font-serif text-white">Book now</div>
         </div>
 
     </div>
