@@ -343,6 +343,9 @@
   .h-\[00px\] {
     height: 00px;
   }
+  .h-\[400px0\] {
+    height: 400px0;
+  }
   .h-\[400px\] {
     height: 400px;
   }
@@ -370,11 +373,20 @@
   .w-\[00px\] {
     width: 00px;
   }
+  .w-\[500\] {
+    width: 500;
+  }
+  .w-\[500px\] {
+    width: 500px;
+  }
   .w-\[600px\] {
     width: 600px;
   }
   .w-\[800px\] {
     width: 800px;
+  }
+  .w-\[1000px\] {
+    width: 1000px;
   }
   .w-auto {
     width: auto;
@@ -534,6 +546,9 @@
   }
   .bg-\[\#110422\] {
     background-color: #110422;
+  }
+  .bg-\[\#150529\] {
+    background-color: #150529;
   }
   .bg-\[\#C42091\] {
     background-color: #C42091;
