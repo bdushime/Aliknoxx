@@ -17,105 +17,124 @@
 
     <!--top-section-->
     <section id="top-section">
-        <div class="relative hero-bg bg-cover bg-no-repeat bg-center h-screen">
-       <!--NavBar-->
-    <nav >  
+     <div class="relative hero-bg bg-cover bg-no-repeat bg-center min-h-screen">
+        <!-- Overlay -->
         <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
 
-          <!--Container-->
-    <div class="flex  p-3  border-b border-white/20 justify-between relative ">
+        <!-- Navigation -->
+        <nav class="relative z-20">
+            <!-- Container -->
+            <div class="flex items-center justify-between p-4 lg:px-8 border-b border-white/20">
+                
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="./images/logo.svg" alt="Logo" class="h-8 lg:h-10">
+                </div>
 
-        <!--Content 1-->
-        <div class="flex items-center justify-center ml-4 lg:ml-32 ">
-            <img src="./images/logo.svg">
-        </div>
-
-        <!--Content 2-->
-          <div class="flex items-center space-x-8">
-                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">
                         Home
                         <span class="text-xs ml-1">▼</span>
                     </a>
-                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">
                         About Us
                     </a>
-                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">
                         Services
                     </a>
-                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">
                         Blog
                     </a>
-                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">
                         Pages
                         <span class="text-xs ml-1">▼</span>
                     </a>
-                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300">
+                    <a href="#" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">
                         Contact Us
                     </a>
                 </div>
 
-         <!--Content 3-->
-        <div class="flex mt-6 pb-3 mr-32">
-            <div class="book-btn text-2xl font-bold font-serif text-white">Book now</div>
-        </div>
+                <!-- Desktop Book Now Button -->
+                <div class="hidden lg:block">
+                    <button class="bg-[#B01E9D] hover:bg-[#9A1A85] text-white font-serif font-bold text-lg px-6 py-3 rounded-full transition-all duration-300 uppercase tracking-wider">
+                        Book Now
+                    </button>
+                </div>
 
-        <!--Mobile Hamburger Menu Button-->
+                <!-- Mobile Hamburger Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="hamburger-menu relative w-8 h-8 flex flex-col justify-center items-center space-y-1">
+                        <div class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300"></div>
+                        <div class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300"></div>
+                        <div class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300"></div>
+                    </button>
+                </div>
+            </div>
 
-        <div class="lg:hidden mr-4">
-            <button id="mobile-menu-button" class="hamburger-menu">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
+            <!-- Mobile Navigation Menu (Hidden by default) -->
+            <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-sm transform -translate-y-full opacity-0 transition-all duration-300 z-10">
+                <div class="flex flex-col space-y-4 p-6">
+                    <a href="#" class="text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">Home</a>
+                    <a href="#" class="text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">About Us</a>
+                    <a href="#" class="text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">Services</a>
+                    <a href="#" class="text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">Blog</a>
+                    <a href="#" class="text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">Pages</a>
+                    <a href="#" class="text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">Contact Us</a>
+                    <button class="bg-[#B01E9D] hover:bg-[#9A1A85] text-white font-serif font-bold text-lg px-6 py-3 rounded-full transition-all duration-300 uppercase tracking-wider mt-4">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 flex flex-col justify-center items-center min-h-screen px-4 pb-20">
+            
+            <!-- Main Heading -->
+            <div class="text-center mb-8">
+                <!-- Tonight -->
+                <h1 class="text-2xl md:text-4xl lg:text-5xl font-serif font-semibold uppercase mb-2 text-white">
+                    Tonight
+                </h1>
+                
+                <!-- Progressive -->
+                <h1 class="text-4xl md:text-7xl lg:text-9xl font-serif font-semibold uppercase mb-2 text-[#B01E9D] leading-none">
+                    Progressive
+                </h1>
+                
+                <!-- Trance Night -->
+                <h1 class="text-3xl md:text-5xl lg:text-7xl font-serif font-semibold uppercase mb-6 text-white">
+                    Trance Night
+                </h1>
 
-            </button>
+                <!-- Description -->
+                <p class="text-center max-w-4xl mx-auto text-sm md:text-base font-serif uppercase text-[#C5C5C7] leading-relaxed">
+                    Dive into the heart of live music with a band that blends energy, emotion, and artistry. From intimate vibes to festival anthems, we bring every moment to life.
+                </p>
+            </div>
 
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+                <button class="px-6 py-3 uppercase text-white bg-[#6617CA] hover:bg-[#5A15B8] rounded-full font-serif font-semibold transition-all duration-300 transform hover:scale-105">
+                    All Albums
+                </button>
+                <button class="px-6 py-3 uppercase text-white bg-[#C42091] hover:bg-[#B01E82] rounded-full font-serif font-semibold transition-all duration-300 transform hover:scale-105">
+                    Book a Table
+                </button>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="flex items-center justify-center">
+                <div class="animate-bounce">
+                    <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+                        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <!--Hero section-->
 
-    <div class="relative flex  flex-col space-y-3  justify-center pb-20 min-h-screen">
-
-        <!--Content 1-->
-        <div class="relative z-10 flex flex-col items-center  px-4 ">
-            <!--Text-->
-            <h4 class="text-4xl font-serif font-semibold uppercase mb-2 text-[#FFFFFF]">
-                Tonight
-            </h4>
-            <!--Text2-->
-            <h4 class="text-9xl font-serif font-semibold uppercase mb-2 text-[#B01E9D] ">
-                Progressive
-            </h4>
-           <!--Text3-->
-            <h4 class="text-7xl font-serif font-semibold uppercase mb-2 text-[#FFFFFF]">
-                trance night
-            </h4>
-
-            <!--Text4-->
-             <h4 class=" text-center max-w-5xl  mx-auto text-sm  font-serif  uppercase mb-2 text-[#C5C5C7]">
-                Dive into the heart of live music with a band that blends energy, emotion, and artistry. From intimate vibes to festival anthems, we bring every moment to life.
-            </h4>
-        </div>
-
-        <!--Content 2-->
-        <div class="flex flex-row items-center justify-center space-x-6">
-           <!--buuton 1-->
-           <div class="p-3 uppercase text-white bg-[#6617CA] rounded-3xl">All albums</div>
-           <!--buuton 2-->
-           <div class="p-3 uppercase text-white bg-[#C42091] rounded-3xl">Book a table</div>
-           
-        </div>
-
-          <!--Animation button-->
-    <div class="flex items-center justify-center mt-3">
-        <div class="p-3 uppercase text-white font-semibold text-2xl font-serif rounded-3xl">
-            Here
-        </div>
- 
-    </div>
-    </div>
-    </nav>
-    </div>
     </section>
 
 <!--Pre-middle-->
@@ -423,3 +442,53 @@
   
 </body>
 </html>
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerLines = mobileMenuButton.querySelectorAll('.hamburger-line');
+            
+            let isMenuOpen = false;
+            
+            mobileMenuButton.addEventListener('click', function() {
+                isMenuOpen = !isMenuOpen;
+                
+                if (isMenuOpen) {
+                    // Open menu
+                    mobileMenu.classList.remove('-translate-y-full', 'opacity-0');
+                    mobileMenu.classList.add('translate-y-0', 'opacity-100');
+                    
+                    // Animate hamburger to X
+                    hamburgerLines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    hamburgerLines[1].style.opacity = '0';
+                    hamburgerLines[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                } else {
+                    // Close menu
+                    mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                    mobileMenu.classList.add('-translate-y-full', 'opacity-0');
+                    
+                    // Reset hamburger
+                    hamburgerLines[0].style.transform = 'none';
+                    hamburgerLines[1].style.opacity = '1';
+                    hamburgerLines[2].style.transform = 'none';
+                }
+            });
+            
+            // Close menu when clicking on links
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    isMenuOpen = false;
+                    mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                    mobileMenu.classList.add('-translate-y-full', 'opacity-0');
+                    
+                    // Reset hamburger
+                    hamburgerLines[0].style.transform = 'none';
+                    hamburgerLines[1].style.opacity = '1';
+                    hamburgerLines[2].style.transform = 'none';
+                });
+            });
+        });
+    </script>
