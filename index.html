@@ -7,13 +7,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-   
-    <link href="./src/output.css" rel="stylesheet">
-    <link href="./src/style.css" rel="stylesheet">
-  
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Didact Gothic', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('./images/hero-bg.jpg'), linear-gradient(135deg, #1a0b3d 0%, #2d1b69 50%, #1a0b3d 100%);
+        }
+        .pre-middle {
+            background-image: linear-gradient(135deg, #110422 0%, #1a0b3d 50%, #110422 100%);
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .text-responsive-xl {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            .text-responsive-2xl {
+                font-size: 2.5rem;
+                line-height: 1.1;
+            }
+            .text-responsive-3xl {
+                font-size: 3rem;
+                line-height: 1;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .text-responsive-xl {
+                font-size: 1.5rem;
+            }
+            .text-responsive-2xl {
+                font-size: 2rem;
+            }
+            .text-responsive-3xl {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
-<body class="min-h-screen bg-[#150529]">
+<body class="min-h-screen bg-[#150529] overflow-x-hidden">
 
     <!--top-section-->
     <section id="top-section">
@@ -92,34 +130,34 @@
         <div class="relative z-10 flex flex-col justify-center items-center min-h-screen px-4 pb-20">
             
             <!-- Main Heading -->
-            <div class="text-center mb-8">
+            <div class="text-center mb-8 max-w-4xl mx-auto">
                 <!-- Tonight -->
-                <h1 class="text-2xl md:text-4xl lg:text-5xl font-serif font-semibold uppercase mb-2 text-white">
+                <h1 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-serif font-semibold uppercase mb-2 text-white">
                     Tonight
                 </h1>
                 
                 <!-- Progressive -->
-                <h1 class="text-4xl md:text-7xl lg:text-9xl font-serif font-semibold uppercase mb-2 text-[#B01E9D] leading-none">
+                <h1 class="text-responsive-3xl md:text-7xl lg:text-9xl font-serif font-semibold uppercase mb-2 text-[#B01E9D] leading-none break-words">
                     Progressive
                 </h1>
                 
                 <!-- Trance Night -->
-                <h1 class="text-3xl md:text-5xl lg:text-7xl font-serif font-semibold uppercase mb-6 text-white">
+                <h1 class="text-responsive-2xl md:text-5xl lg:text-7xl font-serif font-semibold uppercase mb-6 text-white">
                     Trance Night
                 </h1>
 
                 <!-- Description -->
-                <p class="text-center max-w-4xl mx-auto text-sm md:text-base font-serif uppercase text-[#C5C5C7] leading-relaxed">
+                <p class="text-center max-w-3xl mx-auto text-sm md:text-base font-serif uppercase text-[#C5C5C7] leading-relaxed px-4">
                     Dive into the heart of live music with a band that blends energy, emotion, and artistry. From intimate vibes to festival anthems, we bring every moment to life.
                 </p>
             </div>
 
             <!-- Action Buttons -->
-            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
-                <button class="px-6 py-3 uppercase text-white bg-[#6617CA] hover:bg-[#5A15B8] rounded-full font-serif font-semibold transition-all duration-300 transform hover:scale-105">
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8 w-full max-w-md sm:max-w-none">
+                <button class="w-full sm:w-auto px-6 py-3 uppercase text-white bg-[#6617CA] hover:bg-[#5A15B8] rounded-full font-serif font-semibold transition-all duration-300 transform hover:scale-105">
                     All Albums
                 </button>
-                <button class="px-6 py-3 uppercase text-white bg-[#C42091] hover:bg-[#B01E82] rounded-full font-serif font-semibold transition-all duration-300 transform hover:scale-105">
+                <button class="w-full sm:w-auto px-6 py-3 uppercase text-white bg-[#C42091] hover:bg-[#B01E82] rounded-full font-serif font-semibold transition-all duration-300 transform hover:scale-105">
                     Book a Table
                 </button>
             </div>
@@ -139,48 +177,60 @@
 
 <!--Pre-middle-->
 <section id="pre-middle">
-    <div class="relative pre-middle flex flex-col space-y-3 mx-auto bg-center bg-no-repeat bg-cover bg-[#110422] pt-6 pb-20">
+    <div class="relative pre-middle bg-[#110422] py-8 sm:py-12 lg:py-20 overflow-x-hidden">
         <div class="absolute inset-0 bg-[#110422] opacity-50 z-0"></div>
 
         <!--Content 1-->
-        <div class="flex flex-row space-x-12 mt-12 mx-auto gap-24">
-            <!--left content-->
-            <div class="flex flex-col ml-9">
-                <div class="uppercase text-[#7218C2] font-bold font-serif">About us</div>
-                <div class="uppercase text-white text-5xl font-bold font-serif">The soundtrack to your</div>
-                <div class="uppercase text-white text-5xl font-serif font-extrabold">Most <span class="text-[#7218C2]">unforgettable</span></div>
-                <div class="p-3 text-2xl mt-6 uppercase font-bold text-white font-serif">About <span class="text-[#7218C2]">more</span></div>
-            </div>
-
-            <!--right content-->
-            <div class="flex flex-col max-w-xl space-y-3 mr-9 mt-6">
-                <p class="uppercase text-white font-serif">Mastering financial management is key to your business's success. Follow these step-by-step processes to ensure your finances are organized, efficient, and aligned.</p>
-                <p class="uppercase text-white font-serif">Mastering financial management is key to your business's success. Follow these step-by-step processes to ensure your finances are organized, efficient, and aligned.</p>
-            </div>
-        </div>
-
-        <!--Content 2-->
-        <div class="flex flex-col space-y-8">
-            <!--Image-->
-            <div class="flex flex-col items-center">
-                <img src="./images/about-image.jpg" class="h-[400px]">
-            </div>  
-            
-            <!--Sub contents-->
-            <div class="flex flex-row space-x-12 mx-3 justify-center">
-                <div class="flex flex-row text-2xl text-[#7218C2]">
-                    10
-                    <span class="font-serif text-white ml-2">Years Of Experience</span>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12">
+                <!--left content-->
+                <div class="flex flex-col lg:flex-1">
+                    <div class="uppercase text-[#7218C2] font-bold font-serif text-sm sm:text-base mb-2">About us</div>
+                    <div class="uppercase text-white text-responsive-2xl sm:text-3xl lg:text-5xl font-bold font-serif leading-tight mb-2">
+                        The soundtrack to your
+                    </div>
+                    <div class="uppercase text-white text-responsive-2xl sm:text-3xl lg:text-5xl font-serif font-extrabold leading-tight mb-4">
+                        Most <span class="text-[#7218C2]">unforgettable</span>
+                    </div>
+                    <div class="text-lg sm:text-xl lg:text-2xl mt-4 lg:mt-6 uppercase font-bold text-white font-serif">
+                        About <span class="text-[#7218C2]">more</span>
+                    </div>
                 </div>
 
-                <div class="flex flex-row text-2xl text-[#7218C2]">
-                    5
-                    <span class="font-serif text-white ml-2">Albums</span>
+                <!--right content-->
+                <div class="flex flex-col lg:flex-1 lg:max-w-xl space-y-4 lg:mt-6">
+                    <p class="uppercase text-white font-serif text-sm sm:text-base leading-relaxed">
+                        Mastering financial management is key to your business's success. Follow these step-by-step processes to ensure your finances are organized, efficient, and aligned.
+                    </p>
+                    <p class="uppercase text-white font-serif text-sm sm:text-base leading-relaxed">
+                        Mastering financial management is key to your business's success. Follow these step-by-step processes to ensure your finances are organized, efficient, and aligned.
+                    </p>
                 </div>
+            </div>
 
-                <div class="flex flex-row text-2xl text-[#7218C2]">
-                    2
-                    <span class="font-serif text-white ml-2">Projects</span>
+            <!--Content 2-->
+            <div class="flex flex-col space-y-8 mt-12 lg:mt-16">
+                <!--Image-->
+                <div class="flex flex-col items-center">
+                    <img src="./images/about-image.jpg" class="w-full max-w-2xl h-64 sm:h-80 lg:h-96 object-cover rounded-lg">
+                </div>  
+                
+                <!--Sub contents-->
+                <div class="flex flex-col sm:flex-row sm:justify-center gap-4 sm:gap-8 lg:gap-12 text-center">
+                    <div class="flex flex-col sm:flex-row items-center justify-center text-lg sm:text-xl lg:text-2xl text-[#7218C2]">
+                        <span class="font-bold">10</span>
+                        <span class="font-serif text-white sm:ml-2">Years Of Experience</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center text-lg sm:text-xl lg:text-2xl text-[#7218C2]">
+                        <span class="font-bold">5</span>
+                        <span class="font-serif text-white sm:ml-2">Albums</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center text-lg sm:text-xl lg:text-2xl text-[#7218C2]">
+                        <span class="font-bold">2</span>
+                        <span class="font-serif text-white sm:ml-2">Projects</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -188,141 +238,141 @@
 </section>
 
 <!--Team section-->
-<section id="team-section" class="bg-[#150529] py-20">
-    <div class="container mx-auto px-4">
+<section id="team-section" class="bg-[#150529] py-12 sm:py-16 lg:py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Title -->
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white uppercase leading-tight">
-                Meet the team that makes<br>
+        <div class="text-center mb-12 lg:mb-16">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-white uppercase leading-tight max-w-4xl mx-auto">
+                Meet the team that makes<br class="hidden sm:block">
                 Guitar <span class="text-[#B01E9D]">unstoppable</span>
             </h2>
         </div>
 
         <!-- Team Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto">
             <!-- Team Member 1 -->
             <div class="text-center group">
-                <div class="relative overflow-hidden rounded-lg mb-4 bg-gradient-to-br from-orange-400 to-orange-600 p-6 h-80">
+                <div class="relative overflow-hidden rounded-lg mb-4 bg-gradient-to-br from-orange-400 to-orange-600 p-4 sm:p-6 h-64 sm:h-72 lg:h-80">
                     <img src="./images/team-4.jpg" alt="Cameron Williamson" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
                 </div>
-                <h3 class="text-xl font-serif font-semibold text-white">Cameron Williamson</h3>
+                <h3 class="text-lg sm:text-xl font-serif font-semibold text-white">Cameron Williamson</h3>
             </div>
 
             <!-- Team Member 2 -->
             <div class="text-center group">
-                <div class="relative overflow-hidden rounded-lg mb-4 bg-gradient-to-br from-yellow-400 to-yellow-600 p-6 h-80">
+                <div class="relative overflow-hidden rounded-lg mb-4 bg-gradient-to-br from-yellow-400 to-yellow-600 p-4 sm:p-6 h-64 sm:h-72 lg:h-80">
                     <img src="./images/team-1.jpg" alt="Courtney Henry" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
                 </div>
-                <h3 class="text-xl font-serif font-semibold text-white">Courtney Henry</h3>
+                <h3 class="text-lg sm:text-xl font-serif font-semibold text-white">Courtney Henry</h3>
             </div>
 
             <!-- Team Member 3 -->
             <div class="text-center group">
-                <div class="relative overflow-hidden rounded-lg mb-4 bg-gradient-to-br from-purple-500 to-purple-700 p-6 h-80">
+                <div class="relative overflow-hidden rounded-lg mb-4 bg-gradient-to-br from-purple-500 to-purple-700 p-4 sm:p-6 h-64 sm:h-72 lg:h-80">
                     <img src="./images/team-2.jpg" alt="Robert Fox" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
                 </div>
-                <h3 class="text-xl font-serif font-semibold text-white">Robert Fox</h3>
+                <h3 class="text-lg sm:text-xl font-serif font-semibold text-white">Robert Fox</h3>
             </div>
 
             <!-- Team Member 4 -->
             <div class="text-center group">
-                <div class="relative overflow-hidden rounded-lg mb-4 bg-gradient-to-br from-red-500 to-red-700 p-6 h-80">
+                <div class="relative overflow-hidden rounded-lg mb-4 bg-gradient-to-br from-red-500 to-red-700 p-4 sm:p-6 h-64 sm:h-72 lg:h-80">
                     <img src="./images/team-3.jpg" alt="Annette Black" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
                 </div>
-                <h3 class="text-xl font-serif font-semibold text-white">Annette Black</h3>
+                <h3 class="text-lg sm:text-xl font-serif font-semibold text-white">Annette Black</h3>
             </div>
         </div>
     </div>
 </section>
     
    <!-- Latest Album Section -->
-<section id="album-section" class="bg-[#150529] py-20">
-    <div class="container mx-auto px-4">
+<section id="album-section" class="bg-[#150529] py-12 sm:py-16 lg:py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Title -->
-        <div class="text-center mb-16">
-            <h4 class="text-lg font-serif font-medium text-[#B01E9D] uppercase tracking-wider mb-4">
+        <div class="text-center mb-12 lg:mb-16">
+            <h4 class="text-base sm:text-lg font-serif font-medium text-[#B01E9D] uppercase tracking-wider mb-4">
                 Latest Album
             </h4>
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white uppercase leading-tight">
-                Experience the magic of our<br>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-white uppercase leading-tight max-w-4xl mx-auto">
+                Experience the magic of our<br class="hidden sm:block">
                 <span class="text-[#B01E9D]">New Album</span>
             </h2>
         </div>
 
         <!-- Album Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto">
             <!-- Album 1 -->
             <div class="text-center group">
-                <div class="relative overflow-hidden rounded-lg mb-4 h-80 bg-gray-800">
+                <div class="relative overflow-hidden rounded-lg mb-4 h-64 sm:h-72 lg:h-80 bg-gray-800">
                     <img src="./images/album-image-1.jpg" alt="No More Love" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     <!-- Play overlay on hover -->
                     <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="w-16 h-16 bg-[#B01E9D] rounded-full flex items-center justify-center">
-                            <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-[#B01E9D] rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 sm:w-6 sm:h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M8 5v10l8-5-8-5z"/>
                             </svg>
                         </div>
                     </div>
                 </div>
-                <h3 class="text-xl font-serif font-semibold text-white mb-1">No More Love</h3>
-                <p class="text-gray-400 font-serif">DJ Troy</p>
+                <h3 class="text-lg sm:text-xl font-serif font-semibold text-white mb-1">No More Love</h3>
+                <p class="text-gray-400 font-serif text-sm sm:text-base">DJ Troy</p>
             </div>
 
             <!-- Album 2 -->
             <div class="text-center group">
-                <div class="relative overflow-hidden rounded-lg mb-4 h-80 bg-gray-800">
+                <div class="relative overflow-hidden rounded-lg mb-4 h-64 sm:h-72 lg:h-80 bg-gray-800">
                     <img src="./images/album-image-2.jpg" alt="Glitch City" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     <!-- Play overlay on hover -->
                     <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="w-16 h-16 bg-[#B01E9D] rounded-full flex items-center justify-center">
-                            <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-[#B01E9D] rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 sm:w-6 sm:h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M8 5v10l8-5-8-5z"/>
                             </svg>
                         </div>
                     </div>
                 </div>
-                <h3 class="text-xl font-serif font-semibold text-white mb-1">Glitch City</h3>
-                <p class="text-gray-400 font-serif">DJ Troy</p>
+                <h3 class="text-lg sm:text-xl font-serif font-semibold text-white mb-1">Glitch City</h3>
+                <p class="text-gray-400 font-serif text-sm sm:text-base">DJ Troy</p>
             </div>
 
             <!-- Album 3 -->
             <div class="text-center group">
-                <div class="relative overflow-hidden rounded-lg mb-4 h-80 bg-gray-800">
+                <div class="relative overflow-hidden rounded-lg mb-4 h-64 sm:h-72 lg:h-80 bg-gray-800">
                     <img src="./images/album-image-3.jpg" alt="Imagine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     <!-- Play overlay on hover -->
                     <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="w-16 h-16 bg-[#B01E9D] rounded-full flex items-center justify-center">
-                            <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-[#B01E9D] rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 sm:w-6 sm:h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M8 5v10l8-5-8-5z"/>
                             </svg>
                         </div>
                     </div>
                 </div>
-                <h3 class="text-xl font-serif font-semibold text-white mb-1">Imagine</h3>
-                <p class="text-gray-400 font-serif">DJ Remix</p>
+                <h3 class="text-lg sm:text-xl font-serif font-semibold text-white mb-1">Imagine</h3>
+                <p class="text-gray-400 font-serif text-sm sm:text-base">DJ Remix</p>
             </div>
 
             <!-- Album 4 -->
             <div class="text-center group">
-                <div class="relative overflow-hidden rounded-lg mb-4 h-80 bg-gray-800">
+                <div class="relative overflow-hidden rounded-lg mb-4 h-64 sm:h-72 lg:h-80 bg-gray-800">
                     <img src="./images/album-image-4.jpg" alt="Hello Love" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     <!-- Play overlay on hover -->
                     <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="w-16 h-16 bg-[#B01E9D] rounded-full flex items-center justify-center">
-                            <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-[#B01E9D] rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 sm:w-6 sm:h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M8 5v10l8-5-8-5z"/>
                             </svg>
                         </div>
                     </div>
                 </div>
-                <h3 class="text-xl font-serif font-semibold text-white mb-1">Hello Love</h3>
-                <p class="text-gray-400 font-serif">DJ Remix</p>
+                <h3 class="text-lg sm:text-xl font-serif font-semibold text-white mb-1">Hello Love</h3>
+                <p class="text-gray-400 font-serif text-sm sm:text-base">DJ Remix</p>
             </div>
         </div>
 
         <!-- View All Albums Button -->
-        <div class="text-center mt-12">
-            <button class="px-8 py-3 bg-[#B01E9D] text-white font-serif font-semibold uppercase rounded-3xl hover:bg-[#9A1A85] transition-colors duration-300">
+        <div class="text-center mt-8 lg:mt-12">
+            <button class="w-full sm:w-auto px-6 sm:px-8 py-3 bg-[#B01E9D] text-white font-serif font-semibold uppercase rounded-3xl hover:bg-[#9A1A85] transition-colors duration-300">
                 View All Albums
             </button>
         </div>
@@ -331,26 +381,26 @@
 
 
 <!-- Footer Hero Section -->
-<section id="footer-hero" class="relative bg-cover bg-center bg-no-repeat py-20" style="background-image: url('./images/concert-crowd.jpg');">
+<section id="footer-hero" class="relative bg-cover bg-center bg-no-repeat py-12 sm:py-16 lg:py-20" style="background-image: url('./images/concert-crowd.jpg');">
     <!-- Overlay -->
     <div class="absolute inset-0 bg-gradient-to-r from-purple-900/80 to-pink-900/80"></div>
     
     <!-- Content -->
-    <div class="relative z-10 container mx-auto px-4">
-        <div class="flex flex-col lg:flex-row items-center justify-between">
+    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
             <!-- Left Content -->
-            <div class="text-left lg:max-w-2xl mb-8 lg:mb-0">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white uppercase leading-tight mb-2">
+            <div class="text-center lg:text-left lg:max-w-2xl">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-white uppercase leading-tight mb-2">
                     Unique shows, perfect
                 </h2>
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#B01E9D] uppercase leading-tight">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-[#B01E9D] uppercase leading-tight">
                     Music, cocktails
                 </h2>
             </div>
             
             <!-- Right Content - Book Button -->
-            <div class="flex-shrink-0">
-                <button class="bg-[#B01E9D] hover:bg-[#9A1A85] text-white font-serif font-semibold text-lg px-8 py-4 rounded-full transition-colors duration-300 uppercase tracking-wider">
+            <div class="flex-shrink-0 w-full lg:w-auto">
+                <button class="w-full lg:w-auto bg-[#B01E9D] hover:bg-[#9A1A85] text-white font-serif font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-colors duration-300 uppercase tracking-wider">
                     Book a private show
                 </button>
             </div>
@@ -359,54 +409,54 @@
 </section>
 
 <!-- Footer Section -->
-<footer class="bg-[#110422] py-16">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<footer class="bg-[#110422] py-12 sm:py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             
             <!-- Logo Section -->
-            <div class="lg:col-span-1">
+            <div class="col-span-1 sm:col-span-2 lg:col-span-1">
                 <div class="flex items-center mb-6">
                     <div class="w-12 h-12 bg-[#B01E9D] rounded-full flex items-center justify-center mr-3">
                         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-white uppercase">Aliknox</h3>
+                    <h3 class="text-xl sm:text-2xl font-serif font-bold text-white uppercase">Aliknox</h3>
                 </div>
             </div>
 
             <!-- Office Section -->
-            <div class="lg:col-span-1">
-                <h4 class="text-xl font-serif font-semibold text-white mb-6">Office</h4>
+            <div class="col-span-1">
+                <h4 class="text-lg sm:text-xl font-serif font-semibold text-white mb-6">Office</h4>
                 <div class="space-y-3 text-gray-300">
-                    <p class="font-serif">KIGALI - Kg St<br>Kacyiru</p>
-                    <p class="font-serif">+250784876606</p>
+                    <p class="font-serif text-sm sm:text-base">KIGALI - Kg St<br>Kacyiru</p>
+                    <p class="font-serif text-sm sm:text-base">+250784876606</p>
                 </div>
             </div>
 
             <!-- Quick Links Section -->
-            <div class="lg:col-span-1">
-                <h4 class="text-xl font-serif font-semibold text-white mb-6">Quick Link</h4>
+            <div class="col-span-1">
+                <h4 class="text-lg sm:text-xl font-serif font-semibold text-white mb-6">Quick Link</h4>
                 <nav class="space-y-3">
-                    <a href="#" class="block text-gray-300 hover:text-[#B01E9D] font-serif transition-colors duration-300">
+                    <a href="#" class="block text-gray-300 hover:text-[#B01E9D] font-serif transition-colors duration-300 text-sm sm:text-base">
                         • Home
                     </a>
-                    <a href="#" class="block text-gray-300 hover:text-[#B01E9D] font-serif transition-colors duration-300">
+                    <a href="#" class="block text-gray-300 hover:text-[#B01E9D] font-serif transition-colors duration-300 text-sm sm:text-base">
                         • About Us
                     </a>
-                    <a href="#" class="block text-gray-300 hover:text-[#B01E9D] font-serif transition-colors duration-300">
+                    <a href="#" class="block text-gray-300 hover:text-[#B01E9D] font-serif transition-colors duration-300 text-sm sm:text-base">
                         • Our Services
                     </a>
-                    <a href="#" class="block text-gray-300 hover:text-[#B01E9D] font-serif transition-colors duration-300">
+                    <a href="#" class="block text-gray-300 hover:text-[#B01E9D] font-serif transition-colors duration-300 text-sm sm:text-base">
                         • Contacts
                     </a>
                 </nav>
             </div>
 
             <!-- Newsletter Section -->
-            <div class="lg:col-span-1">
-                <h4 class="text-xl font-serif font-semibold text-white mb-6">Newsletter</h4>
-                <p class="text-gray-300 font-serif mb-6">
+            <div class="col-span-1 sm:col-span-2 lg:col-span-1">
+                <h4 class="text-lg sm:text-xl font-serif font-semibold text-white mb-6">Newsletter</h4>
+                <p class="text-gray-300 font-serif mb-6 text-sm sm:text-base">
                     Subscribe to our newsletter and be the first to know about exclusive updates.
                 </p>
                 
@@ -416,13 +466,13 @@
                         <input 
                             type="email" 
                             placeholder="Enter your email" 
-                            class="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 py-3 pr-12 focus:outline-none focus:border-[#B01E9D] font-serif"
+                            class="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 py-3 pr-12 focus:outline-none focus:border-[#B01E9D] font-serif text-sm sm:text-base"
                         >
                         <button 
                             type="submit" 
                             class="absolute right-0 top-1/2 transform -translate-y-1/2 text-[#B01E9D] hover:text-white transition-colors duration-300"
                         >
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
                         </button>
@@ -431,64 +481,75 @@
             </div>
         </div>
 
-    
-        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
-            <p class="text-gray-400 font-serif">
+        <div class="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
+            <p class="text-gray-400 font-serif text-sm sm:text-base">
                 © 2025 Aliknox. All rights reserved.
             </p>
         </div>
     </div>
 </footer>
-  
-</body>
-</html>
-
 
 <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const hamburgerLines = mobileMenuButton.querySelectorAll('.hamburger-line');
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerLines = mobileMenuButton.querySelectorAll('.hamburger-line');
+        
+        let isMenuOpen = false;
+        
+        mobileMenuButton.addEventListener('click', function() {
+            isMenuOpen = !isMenuOpen;
             
-            let isMenuOpen = false;
-            
-            mobileMenuButton.addEventListener('click', function() {
-                isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                // Open menu
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100');
                 
-                if (isMenuOpen) {
-                    // Open menu
-                    mobileMenu.classList.remove('-translate-y-full', 'opacity-0');
-                    mobileMenu.classList.add('translate-y-0', 'opacity-100');
-                    
-                    // Animate hamburger to X
-                    hamburgerLines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                    hamburgerLines[1].style.opacity = '0';
-                    hamburgerLines[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-                } else {
-                    // Close menu
-                    mobileMenu.classList.remove('translate-y-0', 'opacity-100');
-                    mobileMenu.classList.add('-translate-y-full', 'opacity-0');
-                    
-                    // Reset hamburger
-                    hamburgerLines[0].style.transform = 'none';
-                    hamburgerLines[1].style.opacity = '1';
-                    hamburgerLines[2].style.transform = 'none';
-                }
-            });
-            
-            // Close menu when clicking on links
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    isMenuOpen = false;
-                    mobileMenu.classList.remove('translate-y-0', 'opacity-100');
-                    mobileMenu.classList.add('-translate-y-full', 'opacity-0');
-                    
-                    // Reset hamburger
-                    hamburgerLines[0].style.transform = 'none';
-                    hamburgerLines[1].style.opacity = '1';
-                    hamburgerLines[2].style.transform = 'none';
-                });
+                // Animate hamburger to X
+                hamburgerLines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                hamburgerLines[1].style.opacity = '0';
+                hamburgerLines[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                // Close menu
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0');
+                
+                // Reset hamburger
+                hamburgerLines[0].style.transform = 'none';
+                hamburgerLines[1].style.opacity = '1';
+                hamburgerLines[2].style.transform = 'none';
+            }
+        });
+        
+        // Close menu when clicking on links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0');
+                
+                // Reset hamburger
+                hamburgerLines[0].style.transform = 'none';
+                hamburgerLines[1].style.opacity = '1';
+                hamburgerLines[2].style.transform = 'none';
             });
         });
-    </script>
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (isMenuOpen && !mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                isMenuOpen = false;
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0');
+                
+                // Reset hamburger
+                hamburgerLines[0].style.transform = 'none';
+                hamburgerLines[1].style.opacity = '1';
+                hamburgerLines[2].style.transform = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>
