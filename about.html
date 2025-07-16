@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect width="1920" height="1080" fill="%23000"/><circle cx="300" cy="200" r="3" fill="%23ffffff" opacity="0.3"/><circle cx="800" cy="400" r="4" fill="%23ffffff" opacity="0.2"/><circle cx="1200" cy="300" r="2" fill="%23ffffff" opacity="0.4"/><circle cx="1600" cy="600" r="5" fill="%23ffffff" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .about-bg {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+        }
+        
+        .btn-gradient:hover {
+            background: linear-gradient(135deg, #c2185b, #7b1fa2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900 bg-opacity-95 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold">GITAR</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-white transition">HOME</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">ABOUT US</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">SERVICES</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">BLOG</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">PAGES</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">CONTACT US</a>
+                </div>
+                
+                <!-- Book Now Button -->
+                <button class="btn-gradient px-6 py-2 rounded-full text-white font-semibold hover:shadow-lg transition">
+                    BOOK NOW
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center pt-16">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-6xl md:text-8xl font-bold mb-8">ABOUT US</h1>
+            <div class="text-lg text-gray-300 mb-8">
+                <span>Home</span>
+                <span class="mx-2">•</span>
+                <span>Https://Html.Awaikenthemes.Com/</span>
+                <span class="mx-2">•</span>
+                <span>About Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div>
+                    <p class="text-gradient text-sm font-semibold mb-4 tracking-widest">ABOUT US</p>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                        THE SOUNDTRACK TO YOUR<br>
+                        MOST <span class="text-gradient">UNFORGETTABLE</span>
+                    </h2>
+                    <button class="btn-gradient px-8 py-4 rounded-full text-white font-semibold hover:shadow-lg transition">
+                        GET IN TOUCH
+                    </button>
+                </div>
+                
+                <!-- Right Content -->
+                <div class="space-y-8">
+                    <div class="text-gray-300 leading-relaxed">
+                        <p>Mastering financial management is key to your business's success. Follow these step-by-step processes to ensure your finances are organized, efficient, and aligned.</p>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed">
+                        <p>Mastering financial management is key to your business's success. Follow these step-by-step processes to ensure your finances are organized, efficient, and aligned.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Band Image Section -->
+    <section class="relative">
+        <div class="h-96 bg-gradient-to-r from-blue-600 via-purple-600 to-yellow-500 relative overflow-hidden">
+            <!-- Simulated band image with colorful overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-yellow-500 opacity-80"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center">
+                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                        </svg>
+                    </div>
+                    <p class="text-white text-xl font-semibold">Live Music Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Menu Button (for responsive design) -->
+    <script>
+        // Simple mobile menu toggle
+        const mobileMenuBtn = document.createElement('button');
+        mobileMenuBtn.innerHTML = '☰';
+        mobileMenuBtn.className = 'md:hidden text-white text-2xl';
+        // Add to navigation if needed
+    </script>
+</body>
+</html>
