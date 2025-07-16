@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect width="1920" height="1080" fill="%23000"/><circle cx="300" cy="200" r="3" fill="%23ffffff" opacity="0.3"/><circle cx="800" cy="400" r="4" fill="%23ffffff" opacity="0.2"/><circle cx="1200" cy="300" r="2" fill="%23ffffff" opacity="0.4"/><circle cx="1600" cy="600" r="5" fill="%23ffffff" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .about-bg {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+        }
+        
+        .btn-gradient:hover {
+            background: linear-gradient(135deg, #c2185b, #7b1fa2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900 bg-opacity-95 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold">GITAR</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-white transition">HOME</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">ABOUT US</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">SERVICES</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">BLOG</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">PAGES</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">CONTACT US</a>
+                </div>
+                
+                <!-- Book Now Button -->
+                <button class="btn-gradient px-6 py-2 rounded-full text-white font-semibold hover:shadow-lg transition">
+                    BOOK NOW
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center pt-16">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-6xl md:text-8xl font-bold mb-8">ABOUT US</h1>
+            <div class="text-lg text-gray-300 mb-8">
+                <span>Home</span>
+                <span class="mx-2">•</span>
+                <span>Https://Html.Awaikenthemes.Com/</span>
+                <span class="mx-2">•</span>
+                <span>About Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div>
+                    <p class="text-gradient text-sm font-semibold mb-4 tracking-widest">ABOUT US</p>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                        THE SOUNDTRACK TO YOUR<br>
+                        MOST <span class="text-gradient">UNFORGETTABLE</span>
+                    </h2>
+                    <button class="btn-gradient px-8 py-4 rounded-full text-white font-semibold hover:shadow-lg transition">
+                        GET IN TOUCH
+                    </button>
+                </div>
+                
+                <!-- Right Content -->
+                <div class="space-y-8">
+                    <div class="text-gray-300 leading-relaxed">
+                        <p>Mastering financial management is key to your business's success. Follow these step-by-step processes to ensure your finances are organized, efficient, and aligned.</p>
+                    </div>
+                    <div class="text-gray-300 leading-relaxed">
+                        <p>Mastering financial management is key to your business's success. Follow these step-by-step processes to ensure your finances are organized, efficient, and aligned.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-6xl md:text-8xl font-bold mb-8">OUR SERVICES</h1>
+            <div class="text-lg text-gray-300 mb-8">
+                <span>Home</span>
+                <span class="mx-2">•</span>
+                <span>Https://Html.Awaikenthemes.Com/</span>
+                <span class="mx-2">•</span>
+                <span>Our Services</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Cards Section -->
+    <section class="about-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg p-8 hover:border-pink-500 transition-all duration-300 group">
+                    <div class="text-pink-500 mb-6">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-pink-500 transition-colors">
+                        Music Production & Mixing
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Transform raw recordings into polished tracks with expert production.
+                    </p>
+                    <button class="text-white hover:text-pink-500 transition-colors flex items-center font-semibold">
+                        READ MORE
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg p-8 hover:border-pink-500 transition-all duration-300 group">
+                    <div class="text-pink-500 mb-6">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-pink-500 transition-colors">
+                        Instrument Training Classes
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Learn to play not just the guitar, but also other instruments like piano.
+                    </p>
+                    <button class="text-white hover:text-pink-500 transition-colors flex items-center font-semibold">
+                        READ MORE
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg p-8 hover:border-pink-500 transition-all duration-300 group">
+                    <div class="text-pink-500 mb-6">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-pink-500 transition-colors">
+                        Event Sound System Rentals
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Ensure clear and crisp sound at your event with our high-quality sound.
+                    </p>
+                    <button class="text-white hover:text-pink-500 transition-colors flex items-center font-semibold">
+                        READ MORE
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center relative">
+        <!-- Concert stage lighting effect -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-1/4 w-32 h-96 bg-gradient-to-b from-blue-500 to-transparent opacity-30 transform rotate-12"></div>
+            <div class="absolute top-0 right-1/4 w-32 h-96 bg-gradient-to-b from-purple-500 to-transparent opacity-30 transform -rotate-12"></div>
+            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-96 bg-gradient-to-b from-pink-500 to-transparent opacity-40"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <p class="text-pink-500 text-sm font-semibold mb-4 tracking-widest">OUR TESTIMONIALS</p>
+            <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                THE HEARTBEAT OF OUR<br>
+                JOURNEY <span class="text-gradient">OUR SAGES</span>
+            </h1>
+        </div>
+    </section>
+
+    <!-- Mobile Menu Button (for responsive design) -->
+    <script>
+        // Simple mobile menu toggle
+        const mobileMenuBtn = document.createElement('button');
+        mobileMenuBtn.innerHTML = '☰';
+        mobileMenuBtn.className = 'md:hidden text-white text-2xl';
+        // Add to navigation if needed
+    </script>
+</body>
+</html>
