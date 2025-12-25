@@ -3,136 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guitar Website</title>
+    <title>About Us | Muhire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Didact Gothic', sans-serif;
+        }
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect width="1920" height="1080" fill="%23000"/><circle cx="300" cy="200" r="3" fill="%23ffffff" opacity="0.3"/><circle cx="800" cy="400" r="4" fill="%23ffffff" opacity="0.2"/><circle cx="1200" cy="300" r="2" fill="%23ffffff" opacity="0.4"/><circle cx="1600" cy="600" r="5" fill="%23ffffff" opacity="0.1"/></svg>');
-            background-size: cover;
-            background-position: center;
+            background-image: url('./images/hero-bg-2.jpg'), linear-gradient(135deg, #1a0b3d 0%, #2d1b69 50%, #1a0b3d 100%);
         }
-        
-        .about-bg {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-        }
-        
-        .text-gradient {
-            background: linear-gradient(135deg, #e91e63, #9c27b0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .btn-gradient {
-            background: linear-gradient(135deg, #e91e63, #9c27b0);
-        }
-        
-        .btn-gradient:hover {
-            background: linear-gradient(135deg, #c2185b, #7b1fa2);
+        .pre-middle {
+            background-image: linear-gradient(135deg, #110422 0%, #1a0b3d 50%, #110422 100%);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white">
-    
-    <nav class="fixed top-0 w-full z-50 bg-gray-900 bg-opacity-95 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                
-                <div class="flex items-center">
-                    <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-                        </svg>
-                    </div>
-                    <span class="text-xl font-bold">GITAR</span>
-                </div>
-                
-                
-                <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-300 hover:text-white transition">HOME</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition">ABOUT US</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition">SERVICES</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition">BLOG</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition">PAGES</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition">CONTACT US</a>
-                </div>
-                
-                
-                <button class="btn-gradient px-6 py-2 rounded-full text-white font-semibold hover:shadow-lg transition">
-                    BOOK NOW
-                </button>
+<body class="min-h-screen bg-[#150529]">
+
+    <!-- Navigation -->
+    <nav class="relative z-20 bg-black/20 backdrop-blur-sm">
+        <div class="flex items-center justify-between p-4 lg:px-8 border-b border-white/20">
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img src="./images/logo.svg" alt="Logo" class="h-8 lg:h-10">
+                </a>
+            </div>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">Home</a>
+                <a href="index.html#tracks" class="text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">Tracks</a>
+                <a href="index.html#albums" class="text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">Albums</a>
+                <a href="contact.html" class="text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">Contact Us</a>
+            </div>
+            <div class="hidden lg:block">
+                <a href="https://wa.me/PHONE_NUMBER" class="bg-[#B01E9D] hover:bg-[#9A1A85] text-white font-serif font-bold text-lg px-6 py-3 rounded-full transition-all duration-300 uppercase tracking-wider">
+                    Book Now
+                </a>
+            </div>
+            <div class="lg:hidden">
+                <a href="index.html" class="text-white">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center justify-center text-center pt-16">
-        <div class="max-w-4xl mx-auto px-4">
-            <h1 class="text-6xl md:text-8xl font-bold mb-8">ABOUT US</h1>
-            <div class="text-lg text-gray-300 mb-8">
-                <span>Home</span>
-                <span class="mx-2">•</span>
-                <span>Https://Html.Awaikenthemes.Com/</span>
-                <span class="mx-2">•</span>
-                <span>About Us</span>
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero/Header -->
+        <section class="relative py-20 lg:py-32 bg-cover bg-center overflow-hidden" style="background-image: url('./images/about-image.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#110422] via-[#110422]/90 to-transparent"></div>
+            <div class="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif font-bold text-white uppercase leading-tight mb-6">
+                    About <span class="text-[#B01E9D]">Muhire</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-300 max-w-2xl font-serif">
+                    More than just music. It's a journey through sound, emotion, and rhythm.
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="about-bg py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Left Content -->
-                <div>
-                    <p class="text-gradient text-sm font-semibold mb-4 tracking-widest">ABOUT US</p>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                        THE SOUNDTRACK TO YOUR<br>
-                        MOST <span class="text-gradient">UNFORGETTABLE</span>
-                    </h2>
-                    <button class="btn-gradient px-8 py-4 rounded-full text-white font-semibold hover:shadow-lg transition">
-                        GET IN TOUCH
-                    </button>
-                </div>
-                
-                <!-- Right Content -->
-                <div class="space-y-8">
-                    <div class="text-gray-300 leading-relaxed">
-                        <p>Mastering financial management is key to your business's success. Follow these step-by-step processes to ensure your finances are organized, efficient, and aligned.</p>
+        <!-- Biography Section -->
+        <section class="py-16 lg:py-24 bg-[#150529]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur-lg opacity-30"></div>
+                        <img src="./images/team-1.jpg" alt="Muhire Artist" class="relative rounded-lg shadow-2xl w-full object-cover h-[500px] border border-white/10">
                     </div>
-                    <div class="text-gray-300 leading-relaxed">
-                        <p>Mastering financial management is key to your business's success. Follow these step-by-step processes to ensure your finances are organized, efficient, and aligned.</p>
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-6 uppercase">
+                            The Story Behind <span class="text-[#B01E9D]">The Sound</span>
+                        </h2>
+                        <div class="space-y-6 text-gray-300 font-serif text-lg leading-relaxed">
+                            <p>
+                                Born with a passion for rhythm and melody, Muhire has spent over a decade refining a unique sound that bridges the gap between traditional roots and modern electronic beats. What started as a bedroom hobby has evolved into a full-fledged musical career, captivating audiences with immersive soundscapes.
+                            </p>
+                            <p>
+                                "My goal isn't just to make people dance, but to make them feel. Every track is a story, every beat is a heartbeat."
+                            </p>
+                            <p>
+                                With a focus on Progressive Trance and Deep House, Muhire's music is characterized by hypnotic melodies, driving basslines, and an emotional depth that sets it apart in the electronic music scene.
+                            </p>
+                            
+                            <div class="pt-6">
+                                <a href="contact.html" class="inline-block bg-[#B01E9D] hover:bg-[#9A1A85] text-white font-serif font-bold px-8 py-3 rounded-full transition-all duration-300 uppercase tracking-wider">
+                                    Get in Touch
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Band Image Section -->
-    <section class="relative">
-        <div class="h-96 bg-gradient-to-r from-blue-600 via-purple-600 to-yellow-500 relative overflow-hidden">
-            
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-yellow-500 opacity-80"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center">
-                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-                        </svg>
-                    </div>
-                    <p class="text-white text-xl font-semibold">Live Music Experience</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Mobile Menu Button (for responsive design) -->
-    <script>
-    
-        const mobileMenuBtn = document.createElement('button');
-        mobileMenuBtn.innerHTML = '☰';
-        mobileMenuBtn.className = 'md:hidden text-white text-2xl';
-     
-    </script>
+        <!-- Stats/Features -->
+        <section class="py-16 bg-[#110422] border-t border-purple-900/20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6">
+                        <div class="text-4xl lg:text-5xl font-bold text-[#B01E9D] mb-2">10+</div>
+                        <div class="text-white font-serif text-lg uppercase tracking-widest">Years Active</div>
+                    </div>
+                    <div class="p-6 border-l-0 md:border-l border-purple-900/30">
+                        <div class="text-4xl lg:text-5xl font-bold text-[#B01E9D] mb-2">50+</div>
+                        <div class="text-white font-serif text-lg uppercase tracking-widest">Tracks Released</div>
+                    </div>
+                    <div class="p-6 border-l-0 md:border-l border-purple-900/30">
+                        <div class="text-4xl lg:text-5xl font-bold text-[#B01E9D] mb-2">100%</div>
+                        <div class="text-white font-serif text-lg uppercase tracking-widest">Passion</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#110422] py-8 border-t border-purple-900/30">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400 font-serif text-sm">
+                © 2025 Muhire Music. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>

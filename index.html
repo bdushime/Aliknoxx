@@ -99,6 +99,9 @@
                     <a href="#blog" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">
                         Blog
                     </a>
+                    <a href="#tracks" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">
+                        Tracks
+                    </a>
                     <a href="#albums" class="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-pink-300 transition-colors duration-300">
                         Albums
                     </a>
@@ -168,12 +171,12 @@
 
             <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8 w-full max-w-md sm:max-w-none">
-                <button onclick="scrollToSection('albums')" class="w-full sm:w-auto px-6 py-3 uppercase text-white bg-[#6617CA] hover:bg-[#5A15B8] rounded-full font-serif font-semibold transition-all duration-300 transform hover:scale-105">
-                    All Albums
+                <button onclick="document.getElementById('tracks').scrollIntoView({behavior: 'smooth'})" class="w-full sm:w-auto px-6 py-3 uppercase text-white bg-[#6617CA] hover:bg-[#5A15B8] rounded-full font-serif font-semibold transition-all duration-300 transform hover:scale-105">
+                    Latest Tracks
                 </button>
-                <button id="request-track-btn" class="w-full sm:w-auto px-6 py-3 uppercase text-white bg-[#C42091] hover:bg-[#B01E82] rounded-full font-serif font-semibold transition-all duration-300 transform hover:scale-105">
-                    Request a track
-                </button>
+                <a href="https://wa.me/PHONE_NUMBER?text=I'm%20interested%20in%20requesting%20a%20commisisoned%20track" target="_blank" class="w-full sm:w-auto px-6 py-3 uppercase text-white bg-[#C42091] hover:bg-[#B01E82] rounded-full font-serif font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                    Request a Custom Track
+                </a>
             </div>
 
             <!-- Scroll Indicator -->
@@ -186,6 +189,117 @@
             </div>
         </div>
     </div>
+    </section>
+
+    <!-- Track Samples Section -->
+    <section id="tracks" class="section-padding bg-[#150529] py-12 sm:py-16 lg:py-20 relative z-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Title -->
+            <div class="text-center mb-12 lg:mb-16">
+                <h4 class="text-base sm:text-lg font-serif font-medium text-[#B01E9D] uppercase tracking-wider mb-4">
+                    Latest Releases
+                </h4>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-white uppercase leading-tight max-w-4xl mx-auto">
+                    Listen to the <br class="hidden sm:block">
+                    <span class="text-[#B01E9D]">Vibe</span>
+                </h2>
+            </div>
+
+            <!-- Tracks Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Track 1 -->
+                <div class="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl overflow-hidden border border-purple-500/30 hover:border-pink-500/50 transition-all duration-300 group hover:-translate-y-2">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-900">
+                        <!-- Placeholder for YouTube Embed (Private/Unlisted) -->
+                         <iframe class="w-full h-56 sm:h-64 object-cover" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=7Bvx5XyZ1Zz1Zz1Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-serif font-bold text-white mb-1">Neon Nights</h3>
+                                <p class="text-[#B01E9D] font-serif text-sm">Progressive Trance</p>
+                            </div>
+                            <span class="bg-[#B01E9D]/20 text-[#B01E9D] text-xs font-bold px-2 py-1 rounded-full border border-[#B01E9D]/50">NEW</span>
+                        </div>
+                        <p class="text-gray-300 font-serif text-sm mb-6 line-clamp-2">
+                            A high-energy track perfect for late-night drives and club vibes. Deep basslines and ethereal synths.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="track-details.html" class="flex-1 text-center px-4 py-2 border border-white/30 text-white hover:bg-white hover:text-[#110422] rounded-full font-serif font-semibold transition-all duration-300 text-sm">
+                                View Details
+                            </a>
+                            <a href="https://wa.me/PHONE_NUMBER?text=I'm%20interested%20in%20buying%20your%20track%20Neon%20Nights" target="_blank" class="flex-1 text-center px-4 py-2 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full font-serif font-semibold transition-all duration-300 text-sm flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 2 -->
+                <div class="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl overflow-hidden border border-purple-500/30 hover:border-pink-500/50 transition-all duration-300 group hover:-translate-y-2">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-900">
+                        <!-- Placeholder for YouTube Embed -->
+                        <iframe class="w-full h-56 sm:h-64 object-cover" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=7Bvx5XyZ1Zz1Zz1Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-serif font-bold text-white mb-1">Sunset Drive</h3>
+                                <p class="text-[#B01E9D] font-serif text-sm">Synthwave</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 font-serif text-sm mb-6 line-clamp-2">
+                            Smooth, nostalgic retro vibes with a modern production twist. Great for background listening.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="track-details.html" class="flex-1 text-center px-4 py-2 border border-white/30 text-white hover:bg-white hover:text-[#110422] rounded-full font-serif font-semibold transition-all duration-300 text-sm">
+                                View Details
+                            </a>
+                            <a href="https://wa.me/PHONE_NUMBER?text=I'm%20interested%20in%20buying%20your%20track%20Sunset%20Drive" target="_blank" class="flex-1 text-center px-4 py-2 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full font-serif font-semibold transition-all duration-300 text-sm flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 3 -->
+                <div class="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl overflow-hidden border border-purple-500/30 hover:border-pink-500/50 transition-all duration-300 group hover:-translate-y-2">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-900">
+                        <!-- Placeholder for YouTube Embed -->
+                        <iframe class="w-full h-56 sm:h-64 object-cover" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=7Bvx5XyZ1Zz1Zz1Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-serif font-bold text-white mb-1">Deep Echoes</h3>
+                                <p class="text-[#B01E9D] font-serif text-sm">Deep House</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 font-serif text-sm mb-6 line-clamp-2">
+                            Immersive soundscapes designed to transport you to another dimension. Pure audio bliss.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="track-details.html" class="flex-1 text-center px-4 py-2 border border-white/30 text-white hover:bg-white hover:text-[#110422] rounded-full font-serif font-semibold transition-all duration-300 text-sm">
+                                View Details
+                            </a>
+                            <a href="https://wa.me/PHONE_NUMBER?text=I'm%20interested%20in%20buying%20your%20track%20Deep%20Echoes" target="_blank" class="flex-1 text-center px-4 py-2 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full font-serif font-semibold transition-all duration-300 text-sm flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Tracks Button -->
+            <div class="text-center mt-8 lg:mt-12">
+                <button onclick="window.location.href='tracks.html'" class="w-full sm:w-auto px-8 py-3 bg-[#B01E9D] hover:bg-[#9A1A85] text-white font-serif font-bold text-lg rounded-full transition-all duration-300 uppercase tracking-wider transform hover:scale-105">
+                    Browse All Tracks
+                </button>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
