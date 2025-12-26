@@ -1,0 +1,21 @@
+{
+  "name": "aliknoxx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "dev": "live-server --port=3000 --open=/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^4.1.10",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.10"
+  }
+}
