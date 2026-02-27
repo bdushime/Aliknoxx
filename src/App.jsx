@@ -7,7 +7,7 @@ import Tracks from './pages/Tracks';
 import TrackDetails from './pages/TrackDetails'; // Added!
 import Artists from './pages/Artists';
 import ArtistDetails from './pages/ArtistDetails';
-import News from './pages/News';
+import News from './pages/NewsDetails';
 import NewsDetails from './pages/NewsDetails';   // Added!
 import Contact from './pages/Contact';
 import About from './pages/About';
