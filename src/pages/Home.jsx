@@ -25,11 +25,11 @@ const Home = () => {
                 <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
                 <div className="relative z-10 text-center px-4 pb-20">
                     <div className="max-w-4xl mx-auto mb-8">
-                        <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-serif font-semibold uppercase mb-2 text-white">Example Night</h1> {/* Hardcoded for now or dynamic? Legacy had "Tonight" */}
-                        <h1 className="text-4xl sm:text-6xl lg:text-8xl font-serif font-semibold uppercase mb-2 text-[#B01E9D] leading-none">Progressive</h1>
-                        <h1 className="text-3xl sm:text-5xl lg:text-7xl font-serif font-semibold uppercase mb-6 text-white">Trance Night</h1>
+                        <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-serif font-semibold uppercase mb-2 mt-4 text-white">LATEST RELEASES</h1> 
+                        <h1 className="text-4xl sm:text-6xl lg:text-8xl font-serif font-semibold uppercase mb-2 text-[#B01E9D] leading-none">GATIKABISI</h1>
+                        <h1 className="text-3xl sm:text-5xl lg:text-7xl font-serif font-semibold uppercase mb-6 text-white">EXCLUSIVE BEATS</h1>
                         <p className="max-w-3xl mx-auto text-sm md:text-base font-serif uppercase text-[#C5C5C7] leading-relaxed">
-                            Dive into the heart of live music with a band that blends energy, emotion, and artistry.
+                            Discover premium beats, high-energy instrumentals, and custom audio crafted in the heart of Kigali.
                         </p>
                     </div>
                     <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">

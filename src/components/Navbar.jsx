@@ -18,8 +18,8 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'About Us', path: '/about' }, // Assuming separate page for React app
-        { name: 'Services', path: '/#services' }, // Keep as section on Home? Or page? User has service.html? Let's check. User has service.html. So /services.
+        { name: 'About Us', path: '/about' }, 
+        { name: 'Services', path: '/#services' }, 
         { name: 'Blog', path: '/news' },
         { name: 'Tracks', path: '/tracks' },
         { name: 'Albums', path: '/albums' },
@@ -49,7 +49,7 @@ const Navbar = () => {
                         link.path.startsWith('/#') ? (
                             <a 
                                 key={link.name} 
-                                href={link.path.substring(1)} //Remove leading / for anchor if on home page. But React Router HashLink is better. For now simple anchor. 
+                                href={link.path} // FIX: Kept the full /# path here
                                 className="nav-link text-white font-medium text-lg uppercase tracking-wider hover:text-[#B01E9D] transition-colors duration-300"
                             >
                                 {link.name}
@@ -68,9 +68,14 @@ const Navbar = () => {
 
                 {/* Desktop Book Now Button */}
                 <div className="hidden lg:block">
-                    <button className="bg-[#B01E9D] hover:bg-[#9A1A85] text-white font-serif font-bold text-lg px-6 py-3 rounded-full transition-all duration-300 uppercase tracking-wider">
+                    <a 
+                        href="https://wa.me/250784876606?text=Hi%20Gatikabisi!%20I'd%20like%20to%20book%20you%20for%20a%20project/show." 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="bg-[#B01E9D] hover:bg-[#9A1A85] text-white font-serif font-bold text-lg px-6 py-3 rounded-full transition-all duration-300 uppercase tracking-wider inline-block"
+                    >
                         Book Now
-                    </button>
+                    </a>
                 </div>
 
                 {/* Mobile Hamburger Menu Button */}
@@ -87,18 +92,35 @@ const Navbar = () => {
             <div className={`lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
                 <div className="flex flex-col space-y-4 p-6">
                     {navLinks.map((link) => (
-                         <Link 
-                            key={link.name} 
-                            to={link.path.startsWith('/#') ? link.path.substring(1) : link.path} // Simple fix for mobile
-                            onClick={() => setIsMenuOpen(false)}
-                            className="text-white font-medium text-lg uppercase tracking-wider hover:text-[#B01E9D] transition-colors duration-300"
-                        >
-                            {link.name}
-                        </Link>
+                        link.path.startsWith('/#') ? (
+                            <a 
+                                key={link.name} 
+                                href={link.path} // FIX: Used standard anchor tag for hash links on mobile too
+                                onClick={() => setIsMenuOpen(false)}
+                                className="text-white font-medium text-lg uppercase tracking-wider hover:text-[#B01E9D] transition-colors duration-300 block"
+                            >
+                                {link.name}
+                            </a>
+                        ) : (
+                            <Link 
+                                key={link.name} 
+                                to={link.path}
+                                onClick={() => setIsMenuOpen(false)}
+                                className="text-white font-medium text-lg uppercase tracking-wider hover:text-[#B01E9D] transition-colors duration-300 block"
+                            >
+                                {link.name}
+                            </Link>
+                        )
                     ))}
-                    <button className="bg-[#B01E9D] hover:bg-[#9A1A85] text-white font-serif font-bold text-lg px-6 py-3 rounded-full transition-all duration-300 uppercase tracking-wider mt-4 w-full">
+                    <a 
+                        href="https://wa.me/250784876606?text=Hi%20Gatikabisi!%20I'd%20like%20to%20book%20you%20for%20a%20project/show." 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="bg-[#B01E9D] hover:bg-[#9A1A85] text-white font-serif font-bold text-lg px-6 py-3 rounded-full transition-all duration-300 uppercase tracking-wider mt-4 w-full text-center block"
+                    >
                         Book Now
-                    </button>
+                    </a>
                 </div>
             </div>
         </nav>
