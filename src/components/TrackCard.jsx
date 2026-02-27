@@ -2,16 +2,13 @@ import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const TrackCard = ({ track }) => {
-    // 1. Manage playing state and grab a reference to the audio element in the DOM
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(null);
 
-    // 2. Logic to toggle play/pause
     const togglePlay = () => {
         if (isPlaying) {
             audioRef.current.pause();
         } else {
-            // Pause any other tracks that might be playing (optional advanced feature later)
             audioRef.current.play();
         }
         setIsPlaying(!isPlaying);
@@ -20,45 +17,27 @@ const TrackCard = ({ track }) => {
     return (
         <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl overflow-hidden border border-purple-500/30 hover:border-pink-500/50 transition-all duration-300 group hover:-translate-y-2 flex flex-col h-full">
             
-            {/* --- NEW AUDIO PLAYER UI --- */}
             <div className="relative h-56 sm:h-64 bg-[#110422] flex items-center justify-center overflow-hidden group-hover:bg-[#1a0633] transition-colors">
-                
-                {/* Optional: Track Cover Image could go here */}
                 {track.coverImage && (
                     <img src={track.coverImage} alt={track.title} className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
                 )}
-
-                {/* The actual audio element (Hidden from view) */}
-                {/* We'll need to make sure your track data has a 'previewUrl' pointing to a 30s MP3 */}
-                <audio 
-                    ref={audioRef} 
-                    src={track.previewUrl} 
-                    onEnded={() => setIsPlaying(false)} // Reset button when track finishes
-                />
-
-                {/* Custom Play/Pause Button */}
+                <audio ref={audioRef} src={track.previewUrl} onEnded={() => setIsPlaying(false)} />
                 <button 
                     onClick={togglePlay}
                     className="relative z-10 w-16 h-16 bg-[#B01E9D] rounded-full flex items-center justify-center text-white hover:bg-[#C42091] hover:scale-110 transition-transform shadow-[0_0_20px_rgba(176,30,157,0.4)]"
                 >
                     {isPlaying ? (
-                        // Pause Icon
                         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
                     ) : (
-                        // Play Icon
                         <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                     )}
                 </button>
-
-                {/* Simple Equalizer Animation (Visible only when playing) */}
                 {isPlaying && (
                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-800">
-                        {/* We can upgrade this to a real progress bar later, but a CSS animation looks cool for now */}
                         <div className="h-full bg-[#B01E9D] animate-pulse w-full"></div>
                      </div>
                 )}
             </div>
-            {/* --- END AUDIO PLAYER UI --- */}
 
             <div className="p-6 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-4">
@@ -76,7 +55,8 @@ const TrackCard = ({ track }) => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-3 mt-auto">
-                    <Link to={`/tracks?id=${track.id}`} className="flex-1 text-center px-4 py-2 border border-white/30 text-white hover:bg-white hover:text-[#110422] rounded-full font-serif font-semibold transition-all duration-300 text-sm">
+                    {/* CHANGED THIS LINK */}
+                    <Link to={`/tracks/${track.id}`} className="flex-1 text-center px-4 py-2 border border-white/30 text-white hover:bg-white hover:text-[#110422] rounded-full font-serif font-semibold transition-all duration-300 text-sm">
                         View Details
                     </Link>
                     <a 
