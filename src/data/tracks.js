@@ -1,63 +1,72 @@
-// Helper to generate tracks
-// 10 tracks per album
-const generateTracks = () => {
-    const tracks = [];
-    const albums = ["album-1", "album-2", "album-3", "album-4"];
-    const moods = ["Chill", "Energetic", "Dark", "Happy", "Melancholic"];
-    let trackIdCounter = 1;
-
-    albums.forEach(albumId => {
-        for (let i = 1; i <= 10; i++) {
-            tracks.push({
-                id: `track-${trackIdCounter}`,
-                title: `Track ${i} - ${albumId}`,
-                albumId: albumId,
-                artistId: albumId === "album-1" || albumId === "album-2" ? "artist-1" : "artist-2",
-                duration: "3:45",
-                mood: moods[Math.floor(Math.random() * moods.length)],
-                genre: "Electronic",
-                youtubeVideoId: "dQw4w9WgXcQ" // Place holder
-            });
-            trackIdCounter++;
-        }
-    });
-
-    // Add specific featured tracks from legacy home page
-    tracks.push({
-        id: "track-neon-nights",
-        title: "Neon Nights",
-        albumId: "album-1",
-        artistId: "artist-1",
-        duration: "4:32",
+export const tracks = [
+    {
+        id: 1,
+        title: "Kigali Nights",
+        genre: "Afrobeat",
         mood: "Energetic",
-        genre: "Progressive Trance",
-        youtubeVideoId: "dQw4w9WgXcQ",
-        isFeatured: true
-    });
-     tracks.push({
-        id: "track-sunset-drive",
-        title: "Sunset Drive",
-        albumId: "album-2",
-        artistId: "artist-1",
-        duration: "3:20",
-        mood: "Chill",
+        description: "A vibrant, high-energy Afrobeat instrumental featuring heavy percussion, perfect for dance scenes or upbeat vlogs.",
+        isFeatured: true,
+        isNew: true,
+        previewUrl: "/audio/kigali-nights-30s.mp3", // We will put a dummy file here
+        coverImage: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=500&auto=format&fit=crop", 
+        bpm: 115,
+        key: "F# Minor",
+        price: 25.00
+    },
+    {
+        id: 2,
+        title: "Sunset Boulevard",
+        genre: "Amapiano",
+        mood: "Groovy",
+        description: "Deep basslines meet airy synths in this classic Amapiano groove. Great for background lounge mixes.",
+        isFeatured: true,
+        isNew: false,
+        previewUrl: "/audio/sunset-boulevard-30s.mp3",
+        coverImage: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f923?q=80&w=500&auto=format&fit=crop",
+        bpm: 112,
+        key: "A Minor",
+        price: 30.00
+    },
+    {
+        id: 3,
+        title: "Neon Echoes",
         genre: "Synthwave",
-        youtubeVideoId: "dQw4w9WgXcQ",
-        isFeatured: true
-    });
-     tracks.push({
-        id: "track-deep-echoes",
-        title: "Deep Echoes",
-        albumId: "album-3",
-        artistId: "artist-2",
-        duration: "5:10",
-        mood: "Dark",
-        genre: "Deep House",
-        youtubeVideoId: "dQw4w9WgXcQ",
-        isFeatured: true
-    });
-
-    return tracks;
-};
-
-export const tracks = generateTracks();
+        mood: "Chill",
+        description: "Retro-futuristic 80s inspired synthwave track. Heavy analog synth sounds for a cinematic feel.",
+        isFeatured: true,
+        isNew: true,
+        previewUrl: "/audio/neon-echoes-30s.mp3",
+        coverImage: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=500&auto=format&fit=crop",
+        bpm: 105,
+        key: "C Minor",
+        price: 20.00
+    },
+    {
+        id: 4,
+        title: "Heavy Hitters",
+        genre: "Hip Hop",
+        mood: "Aggressive",
+        description: "Hard-hitting 808s and crisp hi-hats make this trap instrumental ready for a vocal overlay.",
+        isFeatured: false,
+        isNew: false,
+        previewUrl: "/audio/heavy-hitters-30s.mp3",
+        coverImage: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=500&auto=format&fit=crop",
+        bpm: 140,
+        key: "D Major",
+        price: 35.00
+    },
+    {
+        id: 5,
+        title: "Ocean Breeze",
+        genre: "R&B",
+        mood: "Romantic",
+        description: "Smooth guitar riffs and a slow drum groove perfect for emotional or romantic scenes.",
+        isFeatured: false,
+        isNew: true,
+        previewUrl: "/audio/ocean-breeze-30s.mp3",
+        coverImage: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=500&auto=format&fit=crop",
+        bpm: 90,
+        key: "E Minor",
+        price: 25.00
+    }
+];
