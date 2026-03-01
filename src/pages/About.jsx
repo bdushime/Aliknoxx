@@ -6,7 +6,7 @@ const About = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                  <SectionTitle subtitle="About Us" title="We Are" highlight="Muhire" />
 
-                  {/* Content from about.html preserved */}
+                  {/* Content from about.html preservd */}
                   <div className="flex flex-col lg:flex-row lg:items-center gap-12 max-w-6xl mx-auto">
                         <div className="flex-1">
                              <div className="relative overflow-hidden rounded-lg shadow-2xl">
